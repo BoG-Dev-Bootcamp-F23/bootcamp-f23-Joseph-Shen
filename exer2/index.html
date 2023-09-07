@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<!-- Your HTML Here -->
+    <body style="background-color:lightblue;">
+      <div>
+        <a class = "item" href="https://github.com/josephshenqz">Github</a>
+        <a class = "item" href="https://www.linkedin.com/in/qingzhou-shen/">LinkedIn</a>
+        <a class = "item" href="https://drive.google.com/file/d/1FC22_e7Xq3_597QciqkqMnUsShd2IRUQ/view?usp=sharing">Resume</a>
+      </div>
+      <h1 style="text-align:center;">
+        Qingzhou (Joseph) Shen
+      </h1>
+      <div class="centered">
+        <button id = "button" onclick="picture()">Click to see my favorite pet</button> <br>
+        <img id = "image" src="https://i.ibb.co/BZygP3B/IMG-3986.jpg" alt="IMG-3986" border="0" width="160" height="120">
+      </div>
+      <script>
+        function picture() {
+          var image = document.getElementById("image");
+          if (image.src == "https://i.ibb.co/BZygP3B/IMG-3986.jpg") {
+            image.src = "https://media.istockphoto.com/id/120757291/photo/young-maine-coon-cat-sitting-on-white-background.jpg?s=612x612&w=0&k=20&c=fd9fxeVm1hs-G_WcHbWC3VLnI-2mTtF6-eYqEoBqwdQ=";
+            image.width = 160;
+            image.height = 184;
+          } else {
+            image.src = "https://i.ibb.co/BZygP3B/IMG-3986.jpg";
+            image.width = 160;
+            image.height = 120;
+          }
+        }
+      </script>
+      
+      <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+      <p style="border-width:3px; border-style:solid; border-color:grey; padding: 1em; background-color:cyan;">
+        Joseph is a second year Computer Science major at Georgia Tech. In high school, he was the captain of the math team and coding club, therefore providing tutoring of these two subjects to all fellow students. During his free time, he likes to solving competitive programming problems, working out, and playing basketball. He would like to join the bootcamp to learn more about web development and participate in some nonprofit projects.
+      </p>
+      
+      <br> <br> 
+      <hr class="dashed">
+      
+      
+      <h4 style = "text-align:center">Now, I would like to know more about you.</h4>
+      <p>Could you tell me your name?</p>
+      <input type = "text" id = "input"> <br> <br>
+      <button onclick = "greetings()"> Click to see the greetings!</button>
+      <p id = "output"></p>
+      <script>
+        function greetings() {
+          var input = document.getElementById("input");
+          var name = input.value;
+          var output = document.getElementById("output");
+          output.innerText = "Hi, " + name + "! Nice to meet you!"
+        }
+      </script>
+      
+      
+    </body>
+    
+    
+    
+    
+</html>

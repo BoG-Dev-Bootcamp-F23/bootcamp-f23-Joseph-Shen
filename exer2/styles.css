@@ -1,0 +1,22 @@
+body{
+  padding: 25px;
+}
+.title {
+	color: #5C6AC4;
+}
+.item {
+  color: black;
+  margin: 0px 60px;
+  text_decoration: none;
+}
+.centered {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+hr.dashed { 
+  border-top: 1px dashed;
+  border-bottom: none;
+}
