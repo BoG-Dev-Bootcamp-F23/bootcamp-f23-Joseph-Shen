@@ -1,3 +1,63 @@
 body {
-    margin: 0
+    margin: 0;
+}
+
+.icon {
+    background-color: white;
+    padding-top: 9px;
+    padding-left: 9px;
+    padding-right: 9px;
+    padding-bottom: 5px;
+    border-radius: 50%;
+    /* margin: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 50%; */
+}
+
+.nav-bar {
+    margin: 0;
+    background-color: #D3D3D3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar li {
+    background-color: cornflowerblue;
+    list-style: none;
+    margin: 10px 20px 10px 20px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+}
+
+.nav-bar .links img {
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.nav-bar a {
+    color: white;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+    border-top: 3px solid #bbb;
 }
