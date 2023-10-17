@@ -8,18 +8,19 @@ export default function LinesPage() {
   return (
     <div>
         <div></div> // header
-        <div>
-            <div className="buttons">
-                <MartaButton name="Arriving"/>
-                <MartaButton name="Scheduled"/>
-                <MartaButton name="Northbound"/>
-                <MartaButton name="Southbound"/>
+        <div> //body
+            <NavBar color={currColor} data={stationData} />
+            <div>
+                <div className="buttons">do
+                    <MartaButton name="Arriving"/>
+                    <MartaButton name="Scheduled"/>
+                    <MartaButton name="Northbound"/>
+                    <MartaButton name="Southbound"/>
+                </div>
+
+                <TrainList color={currColor} data={trainData} />
             </div>
         </div>
-      // YOUR JSX CODE
-      <NavBar color={currColor} data={stationData} />
-      <TrainList color={currColor} data={trainData} />
-      // YOUR JSX CODE
     </div>
   );
 }
