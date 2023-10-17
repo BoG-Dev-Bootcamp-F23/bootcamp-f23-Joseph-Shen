@@ -1,6 +1,9 @@
 // get static data
 import stationData from '../server/stationData';
 import trainData from '../server/trainData';
+import TrainList from './TrainList.js'
+import MartaButton from '../components/MartaButton.js'
+import NavBar from '../components/NavBar.js'
 
 export default function LinesPage() {
   // initialize some currColor state
