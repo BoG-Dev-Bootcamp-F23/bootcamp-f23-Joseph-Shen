@@ -5,14 +5,14 @@ import TrainList from './TrainList.js'
 import MartaButton from '../components/MartaButton.js'
 import NavBar from '../components/NavBar.js'
 
-export default function LinesPage() {
+export default function LinesPage(props) {
   // initialize some currColor state
 
   return (
     <div>
         <div></div> // header
         <div> //body
-            <NavBar color={currColor} data={stationData} />
+            <NavBar color={props.color} data={stationData} />
             <div>
                 <div className="buttons">do
                     <MartaButton name="Arriving"/>
@@ -21,7 +21,7 @@ export default function LinesPage() {
                     <MartaButton name="Southbound"/>
                 </div>
 
-                <TrainList color={currColor} data={trainData} />
+                <TrainList color={props.color} data={trainData} />
             </div>
         </div>
     </div>
