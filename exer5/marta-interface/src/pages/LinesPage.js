@@ -11,7 +11,7 @@ export default function LinesPage(props) {
 
   return (
     <div>
-        <div></div> 
+        <div className = "head">{props.color}</div> 
         <div className = "body">
             <NavBar color={props.color} data={stationData} />
             <div className = "trains">

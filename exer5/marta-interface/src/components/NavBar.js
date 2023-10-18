@@ -1,4 +1,5 @@
 
+import "./NavBar.css"
 import Station from "./Station.js"
 
 export default function NavBar(props) {
@@ -9,8 +10,8 @@ export default function NavBar(props) {
     if (color === "BLUE") color = "blue";
     let stations = props.data
     return (
-        <div> 
-            <div> Select your starting station</div>
+        <div className = "Navbar"> 
+            <div className = "select"> Select your starting station</div>
             <Station station = "All Stations"/>
             {stations[color].map( (station) => {
                 return <Station station = {station}/>;
