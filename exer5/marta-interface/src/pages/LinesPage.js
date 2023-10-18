@@ -15,7 +15,7 @@ export default function LinesPage(props) {
         <div className = "body">
             <NavBar color={props.color} data={stationData} />
             <div className = "trains">
-                <div className="buttons">do
+                <div className="buttons">
                     <MartaButton name="Arriving"/>
                     <MartaButton name="Scheduled"/>
                     <MartaButton name="Northbound"/>

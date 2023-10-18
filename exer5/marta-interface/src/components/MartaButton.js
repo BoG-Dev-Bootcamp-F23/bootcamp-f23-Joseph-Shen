@@ -1,6 +1,7 @@
+import "./MartaButton.css"
 
 export default function MartaButton(props) {
     return (
-        <div className="marta-button"> {props.name} </div>
+        <button className="marta-button"> {props.name} </button>
     );
 }

@@ -1,3 +1,5 @@
+import "./Train.css"
+
 const color2value = {
     "GOLD" : "#e8b60d",
     "BLUE" : "#077ca9",
@@ -20,22 +22,22 @@ export default function Train(props) {
     let val = props.WAITING_TIME.split(" ")[0]
 
     return (
-        <div>
+        <div className = "train">
             <div className = "left">
                 <h1>M</h1>
                 <div className = "middle">
                     <div className = "info1">
-                        {props.STATION} -`{'>'}` {props.DESTINATION}
+                        {props.STATION} -> {props.DESTINATION}
                     </div>
                     <div className = "info2">
-                        <div className = "line"> {props.LINE}</div>
-                        <div className = "ontime"> {ontime}</div>
+                        <div className = "line" style = {{backgroundColor: color}}> {props.LINE}</div>
+                        <div className = "ontime" style = {{color: ontime_color}}> {ontime}</div>
                     </div>
                 </div>
             </div>
 
             <div className = "right">
-                <div> {val}</div>
+                <div className = "minutes"> {val}</div>
                 <div> min </div>
             </div>
         </div>
