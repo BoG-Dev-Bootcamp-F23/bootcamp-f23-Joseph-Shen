@@ -1,0 +1,10 @@
+.Navbar {
+    background-color: rgb(83, 81, 81);
+    color: white;
+    padding: 0 50px 0 0; 
+    width: 270px;
+}
+
+.select {
+    padding: 30px 0 10px 15px;
+}
