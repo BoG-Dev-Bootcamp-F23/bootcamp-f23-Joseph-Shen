@@ -60,7 +60,7 @@ export default function LinesPage() {
           </div>
           :
           <div className = "body">
-              <NavBar color={currColor} data={stationData} />
+              <NavBar color={currColor} data={stationData} updateStation = {setActiveStation}/>
               <div className = "trains">
                   <div className="buttons">
                       <MartaButton name="Arriving"/>
@@ -70,7 +70,7 @@ export default function LinesPage() {
                   </div>
 
                   {console.log(activeStation)}
-                  <TrainList color={currColor} data={trainData} stations = {activeStation}/>
+                  <TrainList color={currColor} data={trainData} station = {activeStation}/>
               </div>
           </div>
         } 
