@@ -14,7 +14,7 @@ export default function NavBar(props) {
         <div className = "Navbar"> 
             <div className = "select"> Select your starting station</div>
             <Station station = "All Stations"/>
-            {stations.map( (station) => {
+            {stations?.map( (station) => {
                 return <Station station = {station}/>;
             })}
         </div>

@@ -12,20 +12,6 @@ const arrivalAPI = 'http://13.59.196.129:3001/arrivals/';
 const stationAPI = 'http://13.59.196.129:3001/stations/';
 
 export default function LinesPage() {
-  // initialize some currColor state
-
-  // const [currColor, setCurrColor] = useState("GOLD");
-  // // setCurrColor("GOLD");
-  // const [trainData, setTrainData] = useState(null);
-  // const [stationData, setStationData] = useState(null);
-  // const [loading, setLoading] = useState(true);
-  // const [activeStation, setActiveStation] = useState("All Stations");
-  // const [activeTrain, setActiveTrain] = useState("All Trains");
-  
-
-
-  const API_URL_ARRIVALS = 'http://13.59.196.129:3001/arrivals/'
-  const API_URL_STATIONS = 'http://13.59.196.129:3001/stations/'
 
   const [currColor, setCurrColor] = useState("GOLD");
   const [trainData, setTrainData] = useState(null);
@@ -37,9 +23,9 @@ export default function LinesPage() {
   useEffect(() => {
     async function fetchData() {
       setLoading(true)
-      const trainResponse = await fetch(API_URL_ARRIVALS + currColor)
+      const trainResponse = await fetch(arrivalAPI + currColor)
       const trainData = await trainResponse.json()
-      const stationResponse = await fetch(API_URL_STATIONS + currColor)
+      const stationResponse = await fetch(stationAPI + currColor)
       const stationData = await stationResponse.json()
       setTrainData(trainData)
       setStationData(stationData)
@@ -83,7 +69,7 @@ export default function LinesPage() {
                       <MartaButton name="Southbound"/>
                   </div>
 
-                  console.log(activeStation)
+                  {console.log(activeStation)}
                   <TrainList color={currColor} data={trainData} stations = {activeStation}/>
               </div>
           </div>
