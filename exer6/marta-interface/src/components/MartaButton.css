@@ -6,3 +6,12 @@
     border: 2px solid black;
     border-radius: 5px;
 }
+
+.activate-marta-button {
+    background-color: grey;
+    padding: 5px 0 5px 0;
+    margin: 20px 20px 20px 20px;
+    width: 120px;
+    border: 2px solid black;
+    border-radius: 5px;
+}

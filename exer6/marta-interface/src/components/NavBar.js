@@ -10,13 +10,13 @@ export default function NavBar(props) {
     // if (color === "BLUE") color = "blue";
     let stations = props.data
     let updateStation = props.updateStation
-    console.log(stations)
+    let activate = props.activate
     return (
         <div className = "Navbar"> 
             <div className = "select"> Select your starting station</div>
-            <Station station = "All Stations" updateStation = {updateStation}/>
+            <Station station = "All Stations" updateStation = {updateStation} activate = {activate}/>
             {stations?.map( (station) => {
-                return <Station station = {station}  updateStation = {updateStation}/>;
+                return <Station station = {station}  updateStation = {updateStation} activate = {activate}/>;
             })}
         </div>
     );

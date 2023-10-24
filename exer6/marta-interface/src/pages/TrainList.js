@@ -22,7 +22,7 @@ function getDirection1(currColor) {
 
 function ff(arrival, filter) {
     if (filter[0] && !(arrival.WAITING_TIME.split(' ')[0] === "Arriving")) return false;
-    if (filter[1] && !(arrival.DELAY === "TOS")) return false;
+    if (filter[1] && !(arrival.DELAY === "T0S")) return false;
     if (filter[2] && !(arrival.DIRECTION === getDirection1(arrival.LINE)[0])) return false;
     if (filter[3] && !(arrival.DIRECTION === getDirection2(arrival.LINE)[0])) return false;
     return true;

@@ -74,7 +74,7 @@ export default function LinesPage() {
           </div>
           :
           <div className = "body">
-              <NavBar color={currColor} data={stationData} updateStation = {setActiveStation}/>
+              <NavBar color={currColor} data={stationData} updateStation = {setActiveStation} activate = {activeStation}/>
               <div className = "trains">
                   <div className="buttons">
                       <MartaButton name="Arriving" update = {setArriving} status = {arriving}/>
