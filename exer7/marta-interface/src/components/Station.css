@@ -1,0 +1,10 @@
+.station {
+    padding: 30px 0 10px 40px;
+    border-bottom: 2px solid white;
+}
+
+.activate-station {
+    padding: 30px 0 10px 40px;
+    border-bottom: 2px solid white;
+    color: black;
+}
