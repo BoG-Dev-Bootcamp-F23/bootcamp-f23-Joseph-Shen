@@ -1,9 +1,9 @@
-.home {
+.home-page {
   font-family: "Oswald", sans-serif;
 }
 
-.header {
-  border: solid 2px grey;
+.home-header {
+  border-bottom: solid 2px grey;
   padding: 20px 0 20px 0;
   display: flex;
   flex-direction: row;
@@ -11,29 +11,29 @@
   align-items: center;
 }
 
-.header h1 {
+.home-header h1 {
     margin: 10px 500px 10px 500px;
 }
 
-.header div {
+.home-header div {
     margin: 10px 50px 10px 50px;
     font-weight: bold;
 }
 
-.body {
+.home-body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 50px 0 50px 0;
 }
 
-.left {
+.home-body-left {
     display: flex;
     flex-direction: column;
     margin: 10px 50px 10px 50px;
 }
 
-.left li {
+.home-body-left li {
     font-size: 25px;
     font-weight: bold;
     border-bottom: solid 2px black;
@@ -41,7 +41,7 @@
     margin: 0 20px 0 0;
 }
 
-.body img {
+.home-body img {
     margin: 0 50px 0 50px;
 }
 

@@ -6,8 +6,8 @@ export default function HomePage() {
     const navigation = useNavigate();
 
     return (
-        <div className="home">
-            <div className="header">
+        <div className="home-page">
+            <div className="home-header">
                 <h1>MARTA</h1>
                 <div>
                     <p onClick={() => {
@@ -15,8 +15,8 @@ export default function HomePage() {
                     }}>About MARTA</p>
                 </div>
             </div>
-            <div className="body">
-                <div className="left">
+            <div className="home-body">
+                <div className="home-body-left">
                     <h1>VIEW ROUTES SCHEDULE</h1>
                     <ul>
                         <li onClick={() => {
