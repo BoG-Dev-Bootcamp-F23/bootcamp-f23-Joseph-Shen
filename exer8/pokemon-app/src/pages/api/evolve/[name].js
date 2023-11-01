@@ -9,21 +9,23 @@ function process(data) {
 }
 
 export default async function handler(req, res) {
-  const {name} = req.query;
-
-  if (name) {
-    const response = await fetch(pokemonAPI + name);
-    const data = await response.json();
-    const id = data.id + 1;
-    const nextResponse = await fetch(pokemonAPI + id);
-    const nextData = await nextResponse.json();
-    if (nextData.order === data.order + 1) res.status(200).json(process(nextData));
-    else res.status(200).json(process(data));
-  } else {
-    const id = Math.floor(Math.random() * 1000) + 1;
-    const response = await fetch(pokemonAPI + id);
-    const data = await response.json();
-    res.status(200).json(data);
-  }
+    if (req.method === "GET") {
+        const {name} = req.query;
+        try {
+          const response = await fetch(pokemonAPI + name);
+          const data = await response.json();
+          const id = data.id + 1;
+          const nextResponse = await fetch(pokemonAPI + id);
+          const nextData = await nextResponse.json();
+          if (nextData.order === data.order + 1) res.status(200).json(process(nextData));
+          else res.status(200).json(process(data));
+        }
+        catch {
+            res.status(400).json({"status": "Invalid Names"});
+        }
+    }
+    else {
+        res.status(500).json({"status": "Wrong Method"});
+    }
 
 }
