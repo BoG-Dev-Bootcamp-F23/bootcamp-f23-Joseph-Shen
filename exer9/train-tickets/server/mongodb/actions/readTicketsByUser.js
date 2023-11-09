@@ -5,10 +5,13 @@ import User from "../models/User.js"
 export default async function updateTicketByUser(data) {
     try {
         await connectDB();
-        const { userID } = data;
-        return await Ticket.find({userID: userID});
+        const userID = data;
+        const user = await User.findById(userID);
+        if (user === null) {
+            throw new Error("User Not Found");
+        }
+        return await Ticket.find({userId: userID});
     } catch (e) {
-        console.log(e)
-        throw new Error("Unable to read tickets. Invalid data or database issue.")
+        throw new Error(e);
     }
 }
