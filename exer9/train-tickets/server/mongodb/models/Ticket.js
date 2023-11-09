@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from 'mongoose';
 
 const ticketSchema = new mongoose.Schema({
     lineColor: {
@@ -9,11 +9,11 @@ const ticketSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    userID: {
+    userId: {
         type: mongoose.Types.ObjectId,
         ref: "User",
         required: true
     }
 })
 
-export default mongoose.models?.User || mongoose.model("Ticket", ticketSchema)
+export default mongoose.models?.Ticket || mongoose.model("Ticket", ticketSchema)
