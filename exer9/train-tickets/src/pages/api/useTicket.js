@@ -10,7 +10,7 @@ export default async function handler(req, res) {
             if (e.message.toString() === "Error: Ticket Not Found") {
                 return res.status(400).json({"status": "Ticket Not Found."});
             }
-            else return res.status(500).json({"status": "Failed to use ticket."});
+            else return res.status(500).json({"status": "Failed to use ticket due to database issues."});
         }
     }
 }

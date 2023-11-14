@@ -6,7 +6,7 @@ export default async function handler(req, res) {
             await createUser(req.body);
             return res.status(200).json({"status": "Success!"});
         } catch (e) {
-            return res.status(500).json({"status": "Failed to register user."});
+            return res.status(500).json({"status": "Failed to register user due to database issues."});
         }
     }
 }

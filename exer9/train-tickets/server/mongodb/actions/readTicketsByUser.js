@@ -6,6 +6,7 @@ export default async function updateTicketByUser(data) {
     try {
         await connectDB();
         const userID = data;
+        console.log(userID);
         const user = await User.findById(userID);
         if (user === null) {
             throw new Error("User Not Found");
